@@ -16,7 +16,7 @@ public class SwaggerUIConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("org.kellyjones"))
                 .paths(PathSelectors.any())
                 .build();
     }
