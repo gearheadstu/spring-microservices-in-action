@@ -23,6 +23,7 @@ public class LicenseController {
 
     @GetMapping
     public List<License> getLicensesForOrganization(@PathVariable(value = "organizationID") Long organizationID) {
+        // FIXME: Integrate HTTP 404 for invalid input
         return licenseService.getLicensesForOrganziation(organizationID);
     }
 
@@ -31,6 +32,7 @@ public class LicenseController {
             @PathVariable(value = "organizationID") Long organizationID,
             @PathVariable(value = "licenseID") Long licenseID) {
 
+        // FIXME: Integrate HTTP 404 for invalid input
         return this.licenseService.getLicense(organizationID, licenseID);
     }
 
