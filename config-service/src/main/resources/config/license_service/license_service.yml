@@ -1,13 +1,8 @@
 spring:
-  application:
-    name: licensing-service
   cloud:
     service-registry:
       auto-registration:
         enabled: false
-
-server:
-  port: 8047
 
 eureka:
   client:
