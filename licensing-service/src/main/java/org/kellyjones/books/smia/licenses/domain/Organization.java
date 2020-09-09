@@ -5,10 +5,9 @@ import lombok.Data;
 
 @Data
 @Builder
-public class License {
+public class Organization {
 
     private Long id;
-    private String productName;
-    private String licenseSeat;
-    private Organization organization;
+    private String name;
+    private OrganizationContact contact;
 }

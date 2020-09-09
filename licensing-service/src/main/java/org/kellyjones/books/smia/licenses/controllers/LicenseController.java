@@ -21,15 +21,15 @@ public class LicenseController {
         this.licenseService = licenseService;
     }
 
-    @GetMapping(value = "")
-    public List<License> getLicensesForOrganization(@PathVariable(value = "organizationID") String organizationID) {
+    @GetMapping
+    public List<License> getLicensesForOrganization(@PathVariable(value = "organizationID") Long organizationID) {
         return licenseService.getLicensesForOrganziation(organizationID);
     }
 
     @GetMapping(value = "/license/{licenseID}")
     public License getLicenseByOrgAndID(
-            @PathVariable(value = "organizationID") String organizationID,
-            @PathVariable(value = "licenseID") String licenseID) {
+            @PathVariable(value = "organizationID") Long organizationID,
+            @PathVariable(value = "licenseID") Long licenseID) {
 
         return this.licenseService.getLicense(organizationID, licenseID);
     }
